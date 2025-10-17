@@ -41,9 +41,11 @@
   color: #888;
 } */
 
-* {
-  padding: 0;
-  margin: 0;
+*, html, body {
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
-  font-family: osw;
+  /* width: 100%; */
+  /* overflow-x: hidden; */
+  /* font-family: osw; */
 }

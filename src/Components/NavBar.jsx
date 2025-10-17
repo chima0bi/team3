@@ -7,20 +7,42 @@ const NavBar = () => {
   return (
     <div>
       <div className="navbar">
-        <img src={logo} className="logo" />
+        <Link to="/">
+          <img src={logo} className="logo" />
+        </Link>
         <nav>
           <ul>
             <li>
-              <NavLink to="/" className={({isActive}) => (isActive? "active-link" : "")}>Home</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={({isActive}) => (isActive? "active-link" : "")}>About</NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                About
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className={({isActive}) => (isActive? "active-link" : "")}>Services</NavLink>
+              <NavLink
+                to="/services"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Services
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className={({isActive}) => (isActive? "active-link" : "")}>Contact Us</NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Contact Us
+              </NavLink>
             </li>
           </ul>
         </nav>

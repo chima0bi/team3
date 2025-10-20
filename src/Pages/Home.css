@@ -12,7 +12,8 @@
 }
 
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../assets/img/hero-bg-img.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/img/hero-bg-img.jpg");
   background-repeat: no-repeat;
   width: 100%;
   height: 100vw;
@@ -26,10 +27,19 @@
   padding: 0;
   justify-content: center;
   text-align: center;
+  margin-bottom: 20px;
   /* position: relative; */
 }
 
-@media(max-width: 768px) {
+.hero-inside {
+  border: solid 2px lightblue;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+}
+
+@media (max-width: 768px) {
   .hero {
     height: 90vh;
     padding: 1rem;
@@ -90,4 +100,34 @@
   text-decoration: none;
   color: brown;
   font-weight: bolder;
+}
+
+.news-cards {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.news-card {
+  display: flex;
+  border-radius: 1dvh;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px ;
+  width: 30%;
+  margin-bottom: 15px;
+}
+
+.news-card:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 6px;
+}
+
+.news-card h3 {
+  color: brown;
+  padding: 10px;
+  background-color: rgba(218, 197, 174, 0.304);
 }

@@ -50,3 +50,30 @@
 .offset-navbar {
   padding-top: 50px;
 }
+
+.search-bar {
+  border-radius: 5dvh;
+  width: 130px;
+  height: 25px;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.hamburger-icon span {
+  background-color: white;
+  height: 3px;
+  width: 20px;
+  margin-bottom: 5px;
+}
+
+.hamburger-icon span:hover {
+  cursor: pointer;
+}
+
+.hamburger-icon:active {
+display: none; 
+}

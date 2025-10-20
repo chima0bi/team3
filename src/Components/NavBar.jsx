@@ -12,6 +12,9 @@ const NavBar = () => {
         </Link>
         <nav>
           <ul>
+            <li class="hamburger-icon">
+              <span></span><span></span><span></span>
+            </li>
             <li>
               <NavLink
                 to="/"
@@ -47,7 +50,7 @@ const NavBar = () => {
           </ul>
         </nav>
         <form action="serch.php" id="search-bar">
-          <input type="text" placeholder="serach..." />
+          <input type="text" className="search-bar" placeholder="search..." />
         </form>
       </div>
       <div className="offset-navbar"></div>

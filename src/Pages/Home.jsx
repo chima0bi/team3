@@ -39,7 +39,7 @@ export default function Home() {
         </ul>
       </div>
       <section className="home-body">
-        <div id="news-and-events">
+        <div id="news-and-events" className="news-and-events">
           <h3 className="section-title">News and Events</h3>
           <div className="news-cards">
             <div className="news-card">
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="promotions">
+        <div id="promotions" className="promotions">
           <h3 className="section-title">Promotions</h3>
           <div className="promote-cards">
             <div className="promote-card">

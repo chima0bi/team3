@@ -1,11 +1,20 @@
+* {
+  transition: 0.3s;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(4, 4, 78);
-  max-height: fit-content;
+  /* max-height: fit-content; */
   position: fixed;
   width: 100%;
+  z-index: 1;
+}
+
+.open {
+  display: flex;
 }
 
 .navbar img {
@@ -15,8 +24,12 @@
   margin-right: 5px;
 }
 
-.logo {
+/* .logo {
   border-radius: 1vh;
+} */
+
+.navbar ul li a:not(.active-link):hover {
+  text-decoration: underline;
 }
 
 .navbar ul {
@@ -25,55 +38,100 @@
   justify-content: space-between;
 }
 
-.navbar a {
+.active-link {
+  background-color: cornflowerblue;
+}
+
+.navbar ul li a {
+  display: block;
   color: white;
   text-decoration: none;
   font-size: 18px;
+  border-radius: 0.5rem;
   font-weight: bold;
   margin: 10px;
   padding: 3px;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-#search-bar {
+/* #search-bar {
   height: 20px;
   border-radius: 15vh;
-}
-
-.active-link {
-  background-color: cornflowerblue;
-}
+} */
 
 .offset-navbar {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
-.search-bar {
+/* .search-bar {
   border-radius: 5dvh;
   width: 130px;
   height: 25px;
-}
+} */
 
 .hamburger-icon {
-  display: flex;
+  /* display: flex; */
+  position: absolute;
+  /* top: 0.75rem; */
+  right: 0.5rem;
+  width: 2.25rem;
+  height: 2rem;
+  margin-top: 12px;
   flex-direction: column;
-  margin-right: 10px;
+  justify-content: space-between;
+  /* margin-right: 15px; */
+  display: none;
 }
 
-.hamburger-icon span {
+.navbar .hamburger-icon span {
   background-color: white;
-  height: 3px;
-  width: 20px;
-  margin-bottom: 5px;
+  height: 0.4rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  /* margin-bottom: 5px; */
 }
 
 .hamburger-icon span:hover {
   cursor: pointer;
 }
 
-.hamburger-icon:active {
+/* .hamburger-icon:active {
 display: none; 
+} */
+@media (max-width: 500px) {
+  .navbar .hamburger-icon {
+    display: flex;
+    /* align-self: right; */
+  }
+
+  .navbar nav.open {
+    display: flex;
+  } 
+
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .navbar nav {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 580px) {
+  .navbar a {
+    font-size: 15px;
+    margin: 5px;
+  }
 }

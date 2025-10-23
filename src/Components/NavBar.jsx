@@ -2,19 +2,29 @@
 import "./NavBar.css";
 import logo from "../assets/img/wayne-logo2.png";
 import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div>
       <div className="navbar">
         <Link to="/">
           <img src={logo} className="logo" />
         </Link>
-        <nav>
+
+        <div
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+          }}
+          className="hamburger-icon"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav className={menuOpen ? "open" : ""}>
           <ul>
-            <li class="hamburger-icon">
-              <span></span><span></span><span></span>
-            </li>
             <li>
               <NavLink
                 to="/"
@@ -49,9 +59,6 @@ const NavBar = () => {
             </li>
           </ul>
         </nav>
-        <form action="serch.php" id="search-bar">
-          <input type="text" className="search-bar" placeholder="search..." />
-        </form>
       </div>
       <div className="offset-navbar"></div>
     </div>

@@ -5,7 +5,7 @@ import { Home, About, Contact, Services } from "./Pages";
 
 export default function App() {
   return (
-    <>
+    <div>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -13,6 +13,6 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </>
+    </div>
   );
 }

@@ -45,7 +45,14 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  /* height: 100%; */
   /* width: 100%; */
   /* overflow-x: hidden; */
   /* font-family: osw; */
 }
+
+/* .App {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+} */
